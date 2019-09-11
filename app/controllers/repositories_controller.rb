@@ -15,9 +15,9 @@ class RepositoriesController < ApplicationController
     else
       @error = body["meta"]["message"]
     end
-    rescue Faraday::ConnectionFailed
-      @error = "There was a timeout. Please try again."
-    end
+    #rescue Faraday::ConnectionFailed
+    #  @error = "There was a timeout. Please try again."
+    #end
     render 'search'
   end
 end
