@@ -14,7 +14,7 @@ class RepositoriesController < ApplicationController
     if @resp.success?
       @results = body["items"]
     else
-      @error = body["meta"]["errorDetail"]
+      @error = body["meta"]["message"]
     end
     rescue Faraday::ConnectionFailed
       @error = "There was a timeout. Please try again."
